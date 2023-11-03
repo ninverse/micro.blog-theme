@@ -9,7 +9,6 @@
 		{{ else }}{{ delimit (split .Summary " " | first 5) " " }} …{{ end }} - {{ .Site.Title }}{{ end -}}
 	 </title>
 	 {{ partial "microblog_head.html" . }}
-	<link rel="stylesheet" href="/css/nv.core.css">
 </head>
 <body>
 {{ partial "header.html" . }}
