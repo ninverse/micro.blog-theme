@@ -1,19 +1,12 @@
-<!-- TODO: add support for navigation layouts -->
 <header>
-	<a href="/">
-		{{ .Site.Title }} <!-- TODO: support for image logo? -->
-	</a>
-
-	<nav>
-		<ul>
-			{{ range .Site.Menus.main }}
+	<a class="site-title" href="/">{{ .Site.Title }}</a>
+	<nav class="site-nav">
+		{{ range .Site.Menus.main }}
 			{{ if .Page.Params.redirect }}
-			<li><a href="{{ .Page.Params.redirect }}">{{ .Name }}</a></li>
+				<a class="page-link" href="{{ .Page.Params.redirect }}">{{ .Name }}</a>
 			{{ else }}
-			<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
+				<a class="page-link" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
 			{{ end }}
-			{{ end }}
-		</ul>
+		{{ end }}
 	</nav>
-	</div>
 </header>
