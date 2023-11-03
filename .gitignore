@@ -4,3 +4,4 @@
 *.scss.map
 */.DS_Store
 .nova
+layouts/partials/.DS_Store
