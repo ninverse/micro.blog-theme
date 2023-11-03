@@ -1,24 +1,19 @@
 <!-- TODO: add support for navigation layouts -->
 <header>
-	<div> <!-- TODO: full width support? -->
-		<div>
-			<div>
-				<a href="/">
-					{{ .Site.Title }} <!-- TODO: support for image logo? -->
-				</a>
-			</div>
-		</div>
+	<a href="/">
+		{{ .Site.Title }} <!-- TODO: support for image logo? -->
+	</a>
 
-		<nav>
-			<ul>
-				{{ range .Site.Menus.main }}
-					{{ if .Page.Params.redirect }}
-						<li><a href="{{ .Page.Params.redirect }}">{{ .Name }}</a></li>
-					{{ else }}
-						<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
-					{{ end }}
-				{{ end }}
-			</ul>
-		</nav>
+	<nav>
+		<ul>
+			{{ range .Site.Menus.main }}
+			{{ if .Page.Params.redirect }}
+			<li><a href="{{ .Page.Params.redirect }}">{{ .Name }}</a></li>
+			{{ else }}
+			<li><a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a></li>
+			{{ end }}
+			{{ end }}
+		</ul>
+	</nav>
 	</div>
 </header>
