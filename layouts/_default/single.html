@@ -1,8 +1,14 @@
-{{ define "title" }}
-	<!-- This will override the default value set in baseof.html; i.e., "{{ .Site.Title }}" in the original example-->
-	{{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
 {{ define "main" }}
-	<h1>{{ .Title }}</h1>
+<div class="post">
+
+  <header class="post-header">
+	<h1 class="post-title">{{ .Title }} &ndash; {{ .Site.Title }}</h1>
+  </header>
+
+  <article class="post-content">
+	  <h1>{{ .Title }}</h1
 	{{ .Content }}
+  </article>
+
+</div>
 {{ end }}
