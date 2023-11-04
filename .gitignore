@@ -6,3 +6,4 @@
 .nova
 layouts/partials/.DS_Store
 static/css/.DS_Store
+.DS_Store
