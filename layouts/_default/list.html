@@ -6,7 +6,6 @@
 	{{ range $paginator.Pages  }}
       <li class="h-entry">
 		{{ if .Title }}
-    <p>Hellllllo</p>
 			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 		{{ end }}
 
@@ -23,13 +22,3 @@
 
 </div>
 {{ end }}
-
-
-<ul>
-{{ range .Site.RegularPages }}
-    <li>   
-    Title: {{ .Title }} - Categories:
-    {{ range .Params.categories }}{{ . }}{{ end }}
-    </li>
-{{ end }}
-</ul>
