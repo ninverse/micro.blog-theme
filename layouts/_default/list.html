@@ -8,6 +8,16 @@
 		{{ if .Title }}
 			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 		{{ end }}
+    
+    {{- if isset .Site.Taxonomies "categories" }}
+    {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+    <ul>
+      {{- range $name, $items := .Site.Taxonomies.categories }}
+      <li><a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title | humanize }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{- end }}
 
         <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
 
