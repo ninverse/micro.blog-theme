@@ -6,7 +6,10 @@
 	{{ range $paginator.Pages  }}
       <li class="h-entry">
 		{{ if .Title }}
-        {{ range .Params.categories }}{{ . }}{{ end }}
+        {{- range $taxonomy := .Site.Taxonomies.categories -}} 
+           <a href="{{ .Page.RelPermalink }}">
+               {{ $taxonomy.Name }}
+           </a>         
 			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 		{{ end }}
 
