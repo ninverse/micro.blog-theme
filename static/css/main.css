@@ -104,6 +104,10 @@ button {
   max-width: 800px;
 }
 
+.post-list {
+  list-style-type: none;
+}
+
 p {
   margin: var(--vspace) 0; 
   line-height: var(--vspace);
