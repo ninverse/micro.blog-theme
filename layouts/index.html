@@ -4,7 +4,6 @@
 	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 25) }}
 	{{ range $paginator.Pages  }}
       <li class="post">
-        <p>Layouts/Index</p>
 		{{ if .Title }}
 			<h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 		{{ end }}
