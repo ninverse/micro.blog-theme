@@ -12,7 +12,7 @@
   --vspace-2: calc(1.5 * var(--space) * 1rem);
   --vspace-3: calc(0.5 * var(--space) * 1rem);
   
-  --font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  --font-size: clamp(1rem, 0.9375rem + 0.3125vw, 1.3125rem);
   --font-color: #333;
   --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
   --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -44,7 +44,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { m
 }
 
 body {
-  font-size: 1em;
+  font-size: var(--font-size);
   font-family: var(--font-family-sans);
   color: var(--font-color);
   background-color: var(--bg-color);
@@ -79,7 +79,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1em;
+  
 }
 
 h6 {
