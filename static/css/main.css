@@ -33,6 +33,9 @@ html {
   scroll-behavior: smooth;
 }
 
+/** Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
+
 /* Box sizing rules */
 *,
 *::before,
@@ -47,9 +50,6 @@ body {
   background-color: var(--bg-color);
 }
 
-/** Reset some basic elements */
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
-
 h1,
 h2,
 h3,
@@ -57,12 +57,12 @@ h4,
 h5,
 h6 {
   font-weight: 500;
-  margin: 0.35em 0 0.7em;
 }
 
 h1 {
   font-size: clamp(2rem, 1.875rem + 0.625vw, 2.625rem);
-  margin: var(--vspace-2) 0 var(--vspace-3) 0;
+  margin: var(--vspace-1) 0 var(--vspace-1) 0;
+  line-height: calc(2rem/var(--space)* var(--vspace));
   word-break: break-word;
 }
 
