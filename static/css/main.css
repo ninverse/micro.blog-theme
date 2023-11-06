@@ -33,7 +33,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/** Reset some basic elements */
+/** Reset basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /* Box sizing rules */
@@ -99,9 +99,17 @@ button {
   font-family: inherit;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 p {
   margin: var(--vspace) 0; 
   line-height: var(--vspace);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 blockquote {
@@ -197,11 +205,6 @@ iframe {
 
 video {
   max-width: 100%;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: calc(25 * var(--vspace-2));
 }
 
 fieldset {
