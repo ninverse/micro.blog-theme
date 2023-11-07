@@ -10,11 +10,16 @@
 
         <a href="{{ .Permalink }}"><span class="post-meta"><time class="date-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
         
+        {{ range .Params.categories }}
+        {{ . }}
+        {{ end }}
+        
         <span class = "categories">
         {{ range .Params.categories }}
-        <a href="{{ .Site.BaseURL }}/categories/{{ . | urlize }}"> {{ . }} </a>
+        <a href="/categories/{{ . | urlize }}"> {{ . }}</a>
         {{ end }}
         </span>
+        
 
         <div class="content">
          	{{ .Content }}
