@@ -9,6 +9,12 @@
 		{{ end }}
 
         <a href="{{ .Permalink }}"><span class="post-meta"><time class="date-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
+        
+        <span class = "categories">
+        {{ range .Params.categories }}
+        <a href="{{ .Site.BaseURL }}/categories/{{ . | urlize }}"> {{ . }} </a>
+        {{ end }}
+        </span>
 
         <div class="content">
          	{{ .Content }}
