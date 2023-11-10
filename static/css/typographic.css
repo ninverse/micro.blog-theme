@@ -1,22 +1,3 @@
-/* 
-https://www.layoutgridcalculator.com/type-scale/base (pt) = 12
-Scale Ratio (1:2) = Golden Ratio
-No. of steps in the scale = 1,2,3,1
-Hexatonic Scale (X6)
-Composition = Fibonacci Series
-H1: 13
-H2: 8
-H3: 5
-H4: 3
-H5: 2
-H6: 1
-Blockquote: 1
-Body text: 1
-Caption: 1
-Endnote: -1
-Footnote: -2 
-*/
-
 :root {
 /* Increase or decrease the number 
 to change the vertical spacing globally*/
