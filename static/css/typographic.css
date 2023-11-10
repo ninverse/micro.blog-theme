@@ -1,9 +1,28 @@
+/* 
+https://www.layoutgridcalculator.com/type-scale/base (pt) = 12
+Scale Ratio (1:2) = Golden Ratio
+No. of steps in the scale = 1,2,3,1
+Hexatonic Scale (X6)
+Composition = Fibonacci Series
+H1: 13
+H2: 8
+H3: 5
+H4: 3
+H5: 2
+H6: 1
+Blockquote: 1
+Body text: 1
+Caption: 1
+Endnote: -1
+Footnote: -2 
+*/
+
 :root {
 /* Increase or decrease the number 
 to change the vertical spacing globally*/
   
 /* Base Vertical Spacing */
-	--space: 1.94;
+	--space: 1.62;
 
 /* Vertical Spacing - multiplier */
 	--vspace: calc(var(--space) * 1rem);
@@ -28,7 +47,7 @@ p {
 
 h1 {
 	margin: var(--vspace-1) 0 var(--vspace-1) 0;
-	line-height: calc(5.2917/var(--space)* var(--vspace));
+	line-height: calc(3.1875/var(--space)* var(--vspace));
 }
 
 h2 {
@@ -47,18 +66,18 @@ h4, h5, h6 {
 }
 
 .bigtitle, h1 {
-	font-size: 5.2917em;
+	font-size: 3.1875em;
 	word-break: break-word;
 }
 
 .title, h2 {
-	font-size: 2.6458em; 
+	font-size: 1.9792em; 
 	font-weight: lighter; 
 	word-break: break-word;
 }
 
 .subheading1, h3 {
-	font-size: 1.75em;
+	font-size: 1.4792em;
 	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: .1em;
@@ -72,12 +91,12 @@ blockquote {
 }
 
 .subheading2, h4 {
-	font-size: 1.3333em;
+	font-size: 1.2292em;
 	text-transform: capitalize;
 }
 
 .subheading3, h5 {
-	font-size: 1.1667em; 
+	font-size: 1.1042em; 
 	font-weight: lighter; 
 	text-transform: uppercase; 
 	letter-spacing: .15em;
@@ -92,22 +111,22 @@ blockquote {
 }
 
 .caption_ts {
-	font-size: 0.7708em;
+	font-size: 0.8333em;
 	font-weight: normal;
 	font-style: italic;
 }
 
-.endnote_ts {font-size: 0.7708em;}
+.endnote_ts {font-size: 0.8333em;}
 
 .footnote_ts {
   margin: var(--vspace-0) 0 var(--vspace-2) 0;
-  font-size: 0.6667em;  
+  font-size: 0.75em;  
   border-top: 1px solid #ccc;
   line-height: 2em;
 }
 
 sup { 
-	font-size: 0.6667rem;
+	font-size: 0.75rem;
 	margin: .5em; 
 	text-transform: none;
 	font-style: italic;
