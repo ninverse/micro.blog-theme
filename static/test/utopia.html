@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<title>Ninverse Utopia</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+<style>
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step -2: 11.11px → 11.52px */
+  --step--2: clamp(0.6944rem, 0.6855rem + 0.0446vw, 0.72rem);
+
+  /* Step -1: 13.33px → 14.40px */
+  --step--1: clamp(0.8331rem, 0.8099rem + 0.1163vw, 0.9rem);
+
+  /* Step 0: 16.00px → 18.00px */
+  --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+
+  /* Step 1: 19.20px → 22.50px */
+  --step-1: clamp(1.2rem, 1.1283rem + 0.3587vw, 1.4063rem);
+
+  /* Step 2: 23.04px → 28.13px */
+  --step-2: clamp(1.44rem, 1.3293rem + 0.5533vw, 1.7581rem);
+
+  /* Step 3: 27.65px → 35.16px */
+  --step-3: clamp(1.7281rem, 1.5649rem + 0.8163vw, 2.1975rem);
+
+  /* Step 4: 33.18px → 43.95px */
+  --step-4: clamp(2.0738rem, 1.8396rem + 1.1707vw, 2.7469rem);
+
+  /* Step 5: 39.81px → 54.93px */
+  --step-5: clamp(2.4881rem, 2.1594rem + 1.6435vw, 3.4331rem);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Space 3xs: 4px → 5px */
+  --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
+
+  /* Space 2xs: 8px → 9px */
+  --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
+
+  /* Space xs: 12px → 14px */
+  --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
+
+  /* Space s: 16px → 18px */
+  --space-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+
+  /* Space m: 24px → 27px */
+  --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
+
+  /* Space l: 32px → 36px */
+  --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
+
+  /* Space xl: 48px → 54px */
+  --space-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
+
+  /* Space 2xl: 64px → 72px */
+  --space-2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
+
+  /* Space 3xl: 96px → 108px */
+  --space-3xl: clamp(6rem, 5.7391rem + 1.3043vw, 6.75rem);
+
+  /* One-up pairs */
+  /* Space 3xs-2xs: 4px → 9px */
+  --space-3xs-2xs: clamp(0.25rem, 0.1413rem + 0.5435vw, 0.5625rem);
+
+  /* Space 2xs-xs: 8px → 14px */
+  --space-2xs-xs: clamp(0.5rem, 0.3696rem + 0.6522vw, 0.875rem);
+
+  /* Space xs-s: 12px → 18px */
+  --space-xs-s: clamp(0.75rem, 0.6196rem + 0.6522vw, 1.125rem);
+
+  /* Space s-m: 16px → 27px */
+  --space-s-m: clamp(1rem, 0.7609rem + 1.1957vw, 1.6875rem);
+
+  /* Space m-l: 24px → 36px */
+  --space-m-l: clamp(1.5rem, 1.2391rem + 1.3043vw, 2.25rem);
+
+  /* Space l-xl: 32px → 54px */
+  --space-l-xl: clamp(2rem, 1.5217rem + 2.3913vw, 3.375rem);
+
+  /* Space xl-2xl: 48px → 72px */
+  --space-xl-2xl: clamp(3rem, 2.4783rem + 2.6087vw, 4.5rem);
+
+  /* Space 2xl-3xl: 64px → 108px */
+  --space-2xl-3xl: clamp(4rem, 3.0435rem + 4.7826vw, 6.75rem);
+
+  /* Custom pairs */
+  /* Space s-l: 16px → 36px */
+  --space-s-l: clamp(1rem, 0.5652rem + 2.1739vw, 2.25rem);
+}
+
+/* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --grid-max-width: 69.75rem;
+  --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
+  --grid-columns: 12;
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
+/* MY CSS CODE */
+
+.grid-of-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--space-s-l);
+  margin-bottom: var(--space-xs);
+}
+
+h1 {
+	font-size: var(--step-5);
+}
+
+h2 {
+	font-size: var(--step-4);
+}
+
+h3 {
+	font-size: var(--step-3);
+}
+
+h4 {
+	font-size: var(--step-2);
+}
+
+h5 {
+	font-size: var(--step-1);
+}
+
+h6 {
+	font-size: var(--step-0);
+}
+
+h4, h5, h6 {
+	margin: var(--vspace-2) 0 var(--vspace-3) 0;
+	line-height: var(--vspace);
+}
+
+p {
+	font-size: var(--step-0);
+}
+
+.endnote {
+	font-size: var(--step--1);
+}
+.footnote {
+	font-size: var(--step--2);
+}
+
+sup { 
+	font-size: 1rem;
+	margin: .5em; 
+	text-transform: none;
+	font-style: italic;
+	font-weight: normal;
+}
+
+
+
+</style>
+	
+</head>
+
+<body>
+<div class="u-container">
+	
+	<h1 class="text-big">The Little Blind Text<sup class="supts">H1</sup></h1>
+	<h2 class="text-title">World of Grammar<sup class="supts">H2</sup></h2>
+	<p class="text-body">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+
+	<h3 class="text-sub1">Italic Mountains<sup class="supts">H3</sup></h3>
+	<p class="text-body">When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+
+	<h4 class="text-sub2">The Bookmarksgrove<sup class="supts">H4</sup></h4>
+	<p class="text-body">She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.</p>
+
+	<p class="text-block">"The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country."</p>
+	<p class="text-body">But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again.</p>
+	
+	<h5 class="text-byline">Vokalia and Consonantia<sup class="supts">H5</sup></h5>
+	<p class="text-body">And if she hasn’t been rewritten, then they are still using her. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+	<h6>The Far World of Grammar<sup class="supts">H6</sup></h6>
+	<p class="text-body">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+	
+	<div class="a-endnote">
+		<ol>
+			<li class="endnote">A small river named Duden flows by their place.</li>
+			<li class="endnote">Pointing has no control about the blind texts.</li>
+		</ol>
+	</div>
+  <div class="a-footnote">
+    <ol>
+      <li class="footnote">A small river named Duden flows by their place.</li>
+      <li class="footnote">Pointing has no control about the blind texts.</li>
+    </ol>
+  </div>
+</div>
+</body>
+
+</html>
