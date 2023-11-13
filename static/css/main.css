@@ -95,9 +95,9 @@ h6 {
 }
 
 .container {
-  /* padding: 1.5rem clamp(1rem, 5%, 2rem); */
-  margin: 0 auto;
-  max-width: 680px;
+width: min(90vw, 680px); 
+margin-inline: auto;
+/* border: 5px solid red; */
 }
 
 .post-list {
