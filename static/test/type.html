@@ -26,7 +26,7 @@ Footnote: -2
 	<meta name="viewport" content="width=device-width initial-scale=1">
 <style>
 	:root {
-	/* Increase or decrease the number 
+	/* Increase or decrease the number --space: 1.62;
 	to change the vertical spacing globally*/
 	  
 	/* Base Vertical Spacing */
@@ -44,7 +44,7 @@ Footnote: -2
 		}
 		
 		.container {
-		width: min(90vw, 640px); 
+		width: min(90vw, 648px);
 		margin-inline: auto;
 		/* border: 1px solid red; */
 		}
@@ -62,7 +62,7 @@ Footnote: -2
 		font-family: var(--font-family-sans);
 		font-size-adjust: 0.5;
 		/* max-width: calc(25 * var(--vspace)); */
-		margin: 0 auto;
+		margin: 0;
 	}
 	
 	p {
@@ -101,10 +101,6 @@ Footnote: -2
 	margin: var(--vspace-3) 0 var(--vspace-2) 0;
 	}
 	
-	.mobile {
-		font-size: 1.1042em;
-	}
-	
 	h1 {
 		margin: var(--vspace-1) 0 var(--vspace-1) 0;
 		line-height: calc(2.625/var(--space)* var(--vspace));
@@ -126,42 +122,41 @@ Footnote: -2
 	}
 	
 	h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
 	letter-spacing: .02em;
 	}
 	
 	.title, h1 {
-		font-size: 2.625em;
+		font-size: 2.625rem;
 		word-break: break-word;
 	}
 	
 	.subtitle, h2 {
-		font-size: 1.7708em; 
+		font-size: 1.7708rem; 
 		font-weight: 600; 
 		word-break: break-word;
 	}
 	
 	.heading1, h3 {
-		font-size: 1.3958em;
+		font-size: 1.3958rem;
 		font-weight: normal;
 		text-transform: uppercase;
 		letter-spacing: .1em;
 	}
 	
 	.heading2, h4 {
-		font-size: 1.1875em;
+		font-size: 1.1875rem;
 		text-transform: capitalize;
 	}
 	
 	.heading3, h5 {
-		font-size: 1.1042em; 
+		font-size: 1.1042rem; 
 		font-weight: bolder;
 		text-transform: uppercase; 
 		letter-spacing: .15em;
 	}
 	
 	.heading4, h6 {
-		font-size: 1em;
+		font-size: 1rem;
 		font-weight: normal;
 		font-style: italic;
 		font-family: var(--font-family-serif)!important;
@@ -169,23 +164,23 @@ Footnote: -2
 	}
 	
 	blockquote {
-		font-size: 1em;        
+		font-size: 1rem;        
 		font-style:italic; 
 		line-height: calc(1*var(--vspace));
 		margin: var(--vspace-2) var(--vspace-2);
 	}
 	
 	.caption {
-		font-size: 0.8542em;
+		font-size: 0.8542rem;
 		font-weight: normal;
 		font-style: italic;
 	}
 	
-	.endnote {font-size: 0.8542em;}
+	.endnote {font-size: 0.8542rem;}
 	
 	.footnote {
 	  margin: var(--vspace-0) 0 var(--vspace-2) 0;
-	  font-size: 0.7917em;  
+	  font-size: 0.7917rem;  
 	  border-top: 1px solid #ccc;
 	  line-height: 2em;
 	}
