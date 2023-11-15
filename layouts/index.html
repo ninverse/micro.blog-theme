@@ -19,9 +19,7 @@
         
 
 
-        <div class="content">
-         	{{ .Content }}
-        </div>
+        <span class="summary">{{ .Summary | truncate 100 }}</span>
       </li>
     {{ end }}
   </ul>
