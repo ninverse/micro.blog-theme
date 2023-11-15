@@ -1,5 +1,5 @@
 <!-- 
-https://www.layoutgridcalculator.com/type-scale/base (pt) = 12
+https://www.layoutgridcalculator.com/type-scale/base (pt) = 14
 Scale Ratio (1:2) = Golden Ratio
 No. of steps in the scale = 1,2,3,1
 Hexatonic Scale (X6)
@@ -12,7 +12,7 @@ H5: 2
 H6: 1
 Blockquote: 1
 Body text: 1
-Caption: 1
+Caption: -1
 Endnote: -1
 Footnote: -2
 -->
@@ -26,7 +26,13 @@ Footnote: -2
 	<meta name="viewport" content="width=device-width initial-scale=1">
 <style>
 	:root {
-	/* Increase or decrease the number --space: 1.62;
+	--font-color: #333;
+	  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
+	  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+	  --font-family-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
+	  
+	  --bg-color: #fff;
+	/* Increase or decrease the number 
 	to change the vertical spacing globally*/
 	  
 	/* Base Vertical Spacing */
@@ -38,10 +44,7 @@ Footnote: -2
 		--vspace-1: calc(2 * var(--space) * 1rem);
 		--vspace-2: calc(1.5 * var(--space) * 1rem);
 		--vspace-3: calc(0.5 * var(--space) * 1rem);
-		--font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
-		--font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-		--font-family-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
-		}
+	}
 		
 		.container {
 		width: min(90vw, 648px);
@@ -61,6 +64,7 @@ Footnote: -2
 		/* font-size: 1em; */
 		font-family: var(--font-family-sans);
 		font-size-adjust: 0.5;
+		font-size: 1.1667em;
 		/* max-width: calc(25 * var(--vspace)); */
 		margin: 0;
 	}
@@ -68,7 +72,6 @@ Footnote: -2
 	p {
 		margin: var(--vspace) 0; 
 		line-height: var(--vspace);
-		font-size: 1.1042em;
 		letter-spacing: .02em
 	}
 	
@@ -103,7 +106,7 @@ Footnote: -2
 	
 	h1 {
 		margin: var(--vspace-1) 0 var(--vspace-1) 0;
-		line-height: calc(2.625/var(--space)* var(--vspace));
+		line-height: calc(3.0625/var(--space)* var(--vspace));
 	}
 	
 	h2 {
@@ -121,53 +124,72 @@ Footnote: -2
 		line-height: var(--vspace);
 	}
 	
-	h1, h2, h3, h4, h5, h6 {
-	letter-spacing: .02em;
-	}
-	
 	.title, h1 {
-		font-size: 2.625rem;
+		font-size: 3.0625em;
 		word-break: break-word;
 	}
 	
 	.subtitle, h2 {
-		font-size: 1.7708rem; 
-		font-weight: 600; 
+		font-size: 2.0625em; 
+		font-weight: lighter; 
 		word-break: break-word;
 	}
 	
 	.heading1, h3 {
-		font-size: 1.3958rem;
+		font-size: 1.625em;
 		font-weight: normal;
 		text-transform: uppercase;
 		letter-spacing: .1em;
 	}
 	
+	blockquote {
+		font-size: 1.1667em;        
+		font-style:italic; 
+		line-height: calc(1.1667*var(--vspace));
+		margin: var(--vspace-2) var(--vspace-2);
+	}
+	
 	.heading2, h4 {
-		font-size: 1.1875rem;
+		font-size: 1.375em;
 		text-transform: capitalize;
 	}
 	
 	.heading3, h5 {
-		font-size: 1.1042rem; 
-		font-weight: bolder;
+		font-size: 1.2708em; 
+		font-weight: lighter; 
 		text-transform: uppercase; 
-		letter-spacing: .15em;
+		letter-spacing: .08em;
 	}
 	
 	.heading4, h6 {
-		font-size: 1rem;
+		font-size: 1.1667em;
 		font-weight: normal;
 		font-style: italic;
-		font-family: var(--font-family-serif)!important;
+		font-family: "le-monde-livre-classic-byol",serif !important;
 		letter-spacing: 0px!important;
 	}
 	
-	blockquote {
-		font-size: 1rem;        
-		font-style:italic; 
-		line-height: calc(1*var(--vspace));
-		margin: var(--vspace-2) var(--vspace-2);
+	.caption {
+		font-size: 1em;
+		font-weight: normal;
+		font-style: italic;
+	}
+	
+	.endnote {font-size: 1em;}
+	
+	.footnote {
+	  margin: var(--vspace-0) 0 var(--vspace-2) 0;
+	  font-size: 0.9375em;  
+	  border-top: 1px solid #ccc;
+	  line-height: 2em;
+	}
+	
+	sup { 
+		font-size: 0.9375rem;
+		margin: .5em; 
+		text-transform: none;
+		font-style: italic;
+		font-weight: normal;
 	}
 	
 	.caption {
