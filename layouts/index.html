@@ -18,8 +18,7 @@
         <a href="{{ .Permalink }}"><span class="post-meta"><time class="date-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
         
 
-
-        <p class="summary">{{ .Summary | truncate 280 }}</p>
+        <p class="summary">{{ .Summary | truncate 300 }}</p>
       </li>
     {{ end }}
   </ul>
