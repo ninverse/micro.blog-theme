@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-US" dir="ltr">
+
   {{ partial "head.html" . }}
   <body>
-    {{ partial "header.html" . }}
-
+    
     <div class="container">
+    {{ partial "header.html" . }}
     {{ block "main" . }}{{ end }}
 
     {{ partial "footer.html" . }}
